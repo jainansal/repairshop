@@ -19,7 +19,6 @@ public class Service {
 	private int id;
 
 	private String code;
-	private String status;
 	private double baseCharge;
 
 	@OneToOne
@@ -36,14 +35,13 @@ public class Service {
 		super();
 	}
 
-	public Service(int id, String code, String status, double baseCharge, DefectiveItem defectiveItem) {
+	public Service(int id, String code, double baseCharge, DefectiveItem defectiveItem, Customer customer) {
 		super();
 		this.id = id;
 		this.code = code;
-		this.status = status;
 		this.baseCharge = baseCharge;
 		this.defectiveItem = defectiveItem;
-		this.customer = defectiveItem.getCustomer();
+		this.customer = customer;
 	}
 
 }
