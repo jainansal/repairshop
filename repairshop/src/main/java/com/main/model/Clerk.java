@@ -11,7 +11,7 @@ public class Clerk extends User {
 		super();
 	}
 
-	public Clerk(int id, String name, String email, String phone, String password) {
-		super(id, name, email, phone, password);
+	public Clerk(int id, String name, String email, String phone, String hashedPassword, User createdBy) {
+		super(id, name, email, phone, hashedPassword, createdBy);
 	}
 }

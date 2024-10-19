@@ -1,16 +1,13 @@
 package com.main;
 
-import javax.persistence.EntityManager;
-
-import com.main.model.Clerk;
-import com.main.provider.EntityManagerFactoryProvider;
+import com.main.dao.CustomerDao;
+import com.main.dao.impl.CustomerDaoImpl;
+import com.main.model.Customer;
 
 public class MainTest {
 	public static void main(String[] args) {
-		EntityManager em = EntityManagerFactoryProvider.getEntityManager();
-		Clerk clerk = new Clerk(0, "Ansal", "ansal@gmail.com", "8723890165", null);
-		em.getTransaction().begin();
-		em.persist(clerk);
-		em.getTransaction().commit();
+		CustomerDao customerDao = new CustomerDaoImpl();
+		Customer customer = customerDao.findByPhone("8527479978");
+		System.out.println(customer);
 	}
 }

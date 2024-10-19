@@ -11,8 +11,10 @@ public class Customer extends User {
 		super();
 	}
 
-	public Customer(int id, String name, String email, String phone, String password) {
-		super(id, name, email, phone, password);
+	public Customer(int id, String name, String email, String phone, String hashedPassword, User createdBy) {
+		super(id, name, email, phone, hashedPassword, createdBy);
 	}
 	
+	
+
 }

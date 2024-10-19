@@ -35,7 +35,7 @@ public abstract class User {
 	@ManyToOne
 	private User createdBy;
 
-	public User() {	
+	public User() {
 		super();
 	}
 
@@ -47,6 +47,13 @@ public abstract class User {
 		this.phone = phone;
 		this.hashedPassword = hashedPassword;
 		this.createdBy = createdBy;
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", email=" + email + ", phone=" + phone + ", hashedPassword="
+				+ hashedPassword + ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + ", createdBy=" + createdBy
+				+ "]";
 	}
 
 }

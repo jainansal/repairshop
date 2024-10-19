@@ -11,8 +11,8 @@ public class RepairPerson extends User {
 		super();
 	}
 
-	public RepairPerson(int id, String name, String email, String phone, String password) {
-		super(id, name, email, phone, password);
+	public RepairPerson(int id, String name, String email, String phone, String hashedPassword, User createdBy) {
+		super(id, name, email, phone, hashedPassword, createdBy);
 	}
 
 }
