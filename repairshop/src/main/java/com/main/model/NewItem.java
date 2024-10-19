@@ -13,8 +13,10 @@ public class NewItem extends Item {
 		super();
 	}
 
-	public NewItem(int id, String productCode, String title, String description, String category, Double price) {
-		super(id, productCode, title, description, category);
+	public NewItem(int id, String productCode, String title, String description, String category, User createdBy,
+			Double price) {
+		super(id, productCode, title, description, category, createdBy);
 		this.price = price;
 	}
+
 }

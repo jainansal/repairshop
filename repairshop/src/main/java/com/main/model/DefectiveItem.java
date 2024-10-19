@@ -15,15 +15,9 @@ public class DefectiveItem extends Item {
 		super();
 	}
 
-	public DefectiveItem(int id, String productCode, String title, String description, String category) {
-		super(id, productCode, title, description, category);
-	}
-
-	public Customer getCustomer() {
-		return customer;
-	}
-
-	public void setCustomer(Customer customer) {
+	public DefectiveItem(int id, String productCode, String title, String description, String category, User createdBy,
+			Customer customer) {
+		super(id, productCode, title, description, category, createdBy);
 		this.customer = customer;
 	}
 

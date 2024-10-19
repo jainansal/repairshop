@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -25,24 +26,27 @@ public abstract class User {
 	private String name;
 	private String email;
 	private String phone;
-	private String password; // TODO: To hash later
+	private String hashedPassword; // TODO: To hash later
 
 	@CreationTimestamp
 	private LocalDateTime createdAt;
 	@UpdateTimestamp
 	private LocalDateTime updatedAt;
+	@ManyToOne
+	private User createdBy;
 
-	public User() {
+	public User() {	
 		super();
 	}
 
-	public User(int id, String name, String email, String phone, String password) {
+	public User(int id, String name, String email, String phone, String hashedPassword, User createdBy) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.phone = phone;
-		this.password = password;
+		this.hashedPassword = hashedPassword;
+		this.createdBy = createdBy;
 	}
 
 }

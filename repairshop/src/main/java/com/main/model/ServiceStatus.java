@@ -18,7 +18,7 @@ public class ServiceStatus {
 	@ManyToOne
 	private Service service;
 
-	private String description;
+	private String description; // Approved for repair, pending request
 
 	@CreationTimestamp
 	private LocalDateTime createdAt;

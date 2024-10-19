@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -31,18 +32,21 @@ public abstract class Item {
 	private LocalDateTime createdAt;
 	@UpdateTimestamp
 	private LocalDateTime updatedAt;
+	@ManyToOne
+	private User createdBy;
 
 	public Item() {
 		super();
 	}
 
-	public Item(int id, String productCode, String title, String description, String category) {
+	public Item(int id, String productCode, String title, String description, String category, User createdBy) {
 		super();
 		this.id = id;
 		this.productCode = productCode;
 		this.title = title;
 		this.description = description;
 		this.category = category;
+		this.createdBy = createdBy;
 	}
 
 }

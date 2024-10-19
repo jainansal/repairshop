@@ -20,6 +20,7 @@ public class Service {
 
 	private String code;
 	private double baseCharge;
+	private String latestStatus;
 
 	@OneToOne
 	private DefectiveItem defectiveItem;
@@ -30,18 +31,22 @@ public class Service {
 	private LocalDateTime createdAt;
 	@UpdateTimestamp
 	private LocalDateTime updatedAt;
+	@ManyToOne
+	private Clerk creeatedBy;
 
 	public Service() {
 		super();
 	}
 
-	public Service(int id, String code, double baseCharge, DefectiveItem defectiveItem, Customer customer) {
+	public Service(int id, String code, double baseCharge, DefectiveItem defectiveItem, Customer customer,
+			Clerk creeatedBy) {
 		super();
 		this.id = id;
 		this.code = code;
 		this.baseCharge = baseCharge;
 		this.defectiveItem = defectiveItem;
 		this.customer = customer;
+		this.creeatedBy = creeatedBy;
 	}
 
 }
