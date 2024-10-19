@@ -9,6 +9,7 @@ public class NewItem extends Item {
 
 	private Double price;
 
+	//This is a new item
 	public NewItem() {
 		super();
 	}
