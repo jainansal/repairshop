@@ -4,7 +4,7 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
-@DiscriminatorValue("new")
+@DiscriminatorValue("NEW")
 public class NewItem extends Item {
 
 	private Double price;

@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
 @Entity
-@DiscriminatorValue("defective")
+@DiscriminatorValue("DEFECTIVE")
 public class DefectiveItem extends Item {
 
 	@ManyToOne

@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
 @Entity
-@DiscriminatorValue("additionalItem")
+@DiscriminatorValue("ADDITIONAL_ITEM")
 public class AdditionalItemRFA extends RequestForApproval {
 
 	@ManyToOne

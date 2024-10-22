@@ -1,13 +1,12 @@
 package com.main;
 
-import com.main.dao.CustomerDao;
-import com.main.dao.impl.CustomerDaoImpl;
-import com.main.model.Customer;
+import javax.persistence.EntityManager;
+
+import com.main.provider.EntityManagerFactoryProvider;
 
 public class MainTest {
+	private static EntityManager em = EntityManagerFactoryProvider.getEntityManager();
 	public static void main(String[] args) {
-		CustomerDao customerDao = new CustomerDaoImpl();
-		Customer customer = customerDao.findByPhone("8527479978");
-		System.out.println(customer);
+		System.out.println("Hi");
 	}
 }

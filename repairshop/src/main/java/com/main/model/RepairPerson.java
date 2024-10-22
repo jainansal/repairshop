@@ -4,7 +4,7 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
-@DiscriminatorValue("repair")
+@DiscriminatorValue("REPAIR")
 public class RepairPerson extends User {
 
 	public RepairPerson() {
